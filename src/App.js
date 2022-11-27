@@ -1,9 +1,10 @@
 import './App.css';
+import Store from './components/Store';
 
 function App() {
   return (
-    <div>Hello World</div>
-  );
+    <Store />
+  )
 }
 
 export default App;
