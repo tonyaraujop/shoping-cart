@@ -1,4 +1,4 @@
-const PRODUCTS = [
+export const PRODUCTS = [
   {
     name: 'Feudum',
     description: 'Game designed by Mark Swanson'
@@ -12,5 +12,3 @@ const PRODUCTS = [
     description: 'Game designed by Stefan Feld'
   }
 ]
-
-export default PRODUCTS
