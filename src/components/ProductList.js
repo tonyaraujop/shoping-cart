@@ -1,9 +1,11 @@
-const ProductList = ({products}) => {
-  return (
-    products.map(product => (
-      <div>{product.name}: {product.description}</div>
-      )
-    )
+import Product from "./Product"
+
+const ProductList = ({ products }) => {
+  products.map(product => {
+    const {name, description} = product
+
+    return <Product name={name} description={description} />
+    }
   )
 }
 
