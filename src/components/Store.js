@@ -1,6 +1,7 @@
 import { useState } from "react"
-import PRODUCTS from "../constants/constants"
-import DefineTab from "./DefineTab"
+import { PRODUCTS } from "../constants/constants"
+import Cart from "./Cart";
+import ProductList from "./ProductList";
 
 const Store = () => {
   const [isProduct, setIsProduct] = useState(true)
@@ -12,7 +13,7 @@ const Store = () => {
         <button onClick={() => setIsProduct(false)}>Shopping Cart</button>
       </header>
       <main>
-        <DefineTab isProduct={isProduct} PRODUCTS={PRODUCTS} cart={[]} />
+        {isProduct ? <ProductList products={PRODUCTS}/> : <Cart cart={[]}/>}
       </main>
     </div>
   )
