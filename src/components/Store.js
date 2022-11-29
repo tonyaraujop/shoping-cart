@@ -13,7 +13,7 @@ const Store = () => {
         <button onClick={() => setIsProduct(false)}>Shopping Cart</button>
       </header>
       <main>
-        {isProduct ? <ProductList products={PRODUCTS}/> : <Cart cart={[]}/>}
+        {isProduct ? <ProductList products={PRODUCTS} addToCart={() => {}}/> : <Cart cart={[]}/>}
       </main>
     </div>
   )
