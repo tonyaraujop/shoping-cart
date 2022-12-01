@@ -1,7 +1,5 @@
-import Product from "./Product"
+import { Product } from "./Product"
 
-const ProductList = ({ products, addToCart }) => (
-  products.map(({ name, description }) => <Product name={name} description={description} addToCart={addToCart} />)
+export const ProductList = ({ products, addToCart }) => (
+  products.map((product) => <Product key={product.id} product={product} addToCart={addToCart} />)
 )
-
-export default ProductList
