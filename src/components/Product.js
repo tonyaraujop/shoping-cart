@@ -1,10 +1,10 @@
-const Product = ({ name, description, addToCart }) => {
+export const Product = ({ product, addToCart = () => {}, disableButton }) => {
+  const { name, description } = product
+
   return (
     <>
       <div>{name}: {description}</div>
-      <button>Add to Cart</button>
+      {disableButton ? <></> : <button onClick={() => addToCart(product)}>Add to Cart</button>}
     </>
   )
 }
-
-export default Product
