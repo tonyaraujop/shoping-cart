@@ -1,13 +1,13 @@
-import { Product } from "./Product"
+import { CartItem } from "./CartItem"
 
-export const Cart = ({ products }) => {
+export const Cart = ({ cartItems, removeFromCart }) => {
   return (
     <>
       <header><h1>Shopping Cart</h1></header>
-      <div>Your shopping cart have {products.length} items added</div>
+      <div>Your shopping cart have {cartItems.length} items added</div>
       <main>
-        {products.map((product) => (
-          < Product key={product.id} product={product} hideAddToCartButton={true}/>
+        {cartItems.map((cartItem) => (
+          <CartItem key={cartItem.id} cartItem={cartItem} removeFromCart={removeFromCart} />
         ))}
       </main>
     </>
