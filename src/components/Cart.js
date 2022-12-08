@@ -7,7 +7,7 @@ export const Cart = ({ products }) => {
       <div>Your shopping cart have {products.length} items added</div>
       <main>
         {products.map((product) => (
-          < Product key={product.id} product={product} disableButton={true}/>
+          < Product key={product.id} product={product} hideAddToCartButton={true}/>
         ))}
       </main>
     </>
