@@ -7,9 +7,6 @@ export const Product = ({ product, addToCart, removeFromCart}) => {
       {removeFromCart ?
         <button onClick={() => removeFromCart(product)}>Remove item from Cart</button> :
         <button onClick={() => addToCart(product)}>Add to Cart</button>}
-      {removeFromCart ?
-        <button onClick={() => removeFromCart(product)}>Remove item from Cart</button> :
-        <button onClick={() => addToCart(product)}>Add to Cart</button>}
     </>
   )
 }
