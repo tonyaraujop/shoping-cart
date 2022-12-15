@@ -17,6 +17,10 @@ export const Store = () => {
     cartProducts.includes(product) ? flashMessage() : setCartProducts([...cartProducts, product])
   }
 
+  const removeFromCart = (product) => {
+    setCartProducts([...cartProducts.filter(cartProduct => cartProduct !== product)])
+  }
+
   return (
     <div>
       <header>
@@ -25,7 +29,7 @@ export const Store = () => {
       </header>
         <ToastContainer />
       <main>
-        {isProduct ? <ProductList products={PRODUCTS} addToCart={addToCart}/> : <Cart products={cartProducts}/>}
+        {isProduct ? <ProductList products={PRODUCTS} addToCart={addToCart}/> : <Cart cartItems={cartProducts} removeFromCart={removeFromCart}/>}
       </main>
     </div>
   )
